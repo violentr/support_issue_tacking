@@ -1,0 +1,20 @@
+= form_tag "#{welcome_create_query_path}" 
+%p Customers' List:
+%p=select_tag 'customer',options_for_select(@customers,'1')
+=# Customer.all.collect(&:email).to_sentence
+%br
+%table{class: 'table'}
+	%tr
+		%th Customer's name:
+		%td= text_field_tag 'name', nil, size: "28",placeholder: "Charles"
+	%tr
+		%th Customer's email:
+		%td= text_field_tag 'email', nil, size: "28",placeholder: "name@email.co.uk"
+	%tr
+		%th Describe Issue:
+		%td= text_area_tag 'issue'
+	%tr
+		%th Addressed to:
+		%td= select_tag 'department',options_for_select(@departments)   
+%div{style:"padding-top:10px;"}
+	= submit_tag 'Send query'
