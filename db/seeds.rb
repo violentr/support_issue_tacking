@@ -9,3 +9,8 @@
 		Customer.create(name: name, email: "#{name}@mail.co.uk")
 	end
 	puts "Fake customers's names with emails were added !"
+
+	%w{Sales Support Representative}.each do |department|
+		Department.create(title: department)
+	end
+	puts "Fake departments were added !"
