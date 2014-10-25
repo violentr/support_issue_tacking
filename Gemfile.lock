@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/mongoid/mongoid.git
+  revision: f4f489e45adb0059fae6854d8a29ebb79cc6c8fd
+  specs:
+    mongoid (4.0.0)
+      activemodel (~> 4.0)
+      moped (~> 2.0.0)
+      origin (~> 2.1)
+      tzinfo (>= 0.3.37)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -28,12 +38,11 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    bson (1.11.1)
-    bson_ext (1.11.1)
-      bson (~> 1.11.1)
+    bson (2.3.0)
+    bson_ext (1.5.1)
     builder (3.2.2)
+    connection_pool (2.0.0)
     diff-lcs (1.2.5)
-    durran-validatable (2.0.1)
     erubis (2.7.0)
     execjs (2.2.2)
     haml (4.0.5)
@@ -49,19 +58,17 @@ GEM
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     json (1.8.1)
-    leshill-will_paginate (2.3.11)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
     minitest (5.4.2)
-    mongo (1.11.1)
-      bson (= 1.11.1)
-    mongoid (1.0.6)
-      activesupport (>= 2.2.2)
-      durran-validatable (>= 2.0.1)
-      leshill-will_paginate (>= 2.3.11)
-      mongo (>= 0.18.2)
+    moped (2.0.1)
+      bson (~> 2.2)
+      connection_pool (~> 2.0)
+      optionable (~> 0.2.0)
     multi_json (1.10.1)
+    optionable (0.2.0)
+    origin (2.1.1)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -127,12 +134,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bson
+  bson (~> 2.2)
   bson_ext
   haml
   haml-rails
   jbuilder (~> 2.0)
-  mongoid
+  mongoid (~> 4.0.0.rc1)!
   rails (= 4.1.6)
   rspec
   sass-rails (~> 4.0.3)
