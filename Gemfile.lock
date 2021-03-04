@@ -38,10 +38,10 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    bson (2.3.0)
+    bson (3.2.7)
     bson_ext (1.5.1)
     builder (3.2.2)
-    connection_pool (2.0.0)
+    connection_pool (2.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -62,8 +62,8 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
     minitest (5.4.2)
-    moped (2.0.1)
-      bson (~> 2.2)
+    moped (2.0.7)
+      bson (~> 3.0)
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
     multi_json (1.10.1)
@@ -138,7 +138,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bson (~> 2.2)
+  bson (~> 3.2)
   bson_ext
   haml
   haml-rails
